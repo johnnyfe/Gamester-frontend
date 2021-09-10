@@ -8,9 +8,8 @@ function HomePage() {
             <h1>Gamester</h1><br/>
             <p>Are you interesting in becoming a famous videogame player and show others what you can do?</p>
             <p>Do you want to see others your favorite players, playing the games you like?</p>
-            <p>You came to the right place to do it!!</p>
+            <p>You came to the right place to do i!!</p>
             <p>Welcome to Gamester app the v ideogame platform to watch videogame players with their games</p>
-            <img href="../images/G.png" alt="logo"></img>
             <p>Copyright:</p>
             <p>© 2021 Gamester, Inc</p>
         </div>
