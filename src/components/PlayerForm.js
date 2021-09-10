@@ -16,7 +16,8 @@ function PlayerForm({handleAddPlayer}) {
         setPlayer(updatedValue);
     }
 
-    function handleSubmit(){
+    function handleSubmit(e){
+        e.preventDefault();
         const newplayer = {
             name: player.name,
             age: player.age,
