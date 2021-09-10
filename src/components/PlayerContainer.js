@@ -17,7 +17,7 @@ function PlayerContainer() {
 
     function populatePlayers() {
         return players.map((player) => (
-        <Player player={player} key={player.id}/>));
+        <Player player={player} key={player.id} updatePlayer={updatePlayer}/>));
     }
     
     //CREATE
@@ -25,6 +25,26 @@ function PlayerContainer() {
     function handleAddPlayer(newPlayer){
         const updatedPlayer = ([...players, newPlayer])
         return setPlayers(updatedPlayer)
+    }
+
+    //UPDATE
+
+    function updatePlayer(player){
+        fetch(BASE_URL + 'players/' + player.id, {
+            method: "PATCH",
+            body: JSON.stringify(player),
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+              },
+        });
+        const newPlayer = players.map((p) =>{
+            if (p.id === player.id) {
+                p = player;
+            }
+            return p
+        })
+        setPlayers(newPlayer)
     }
 
     return(
