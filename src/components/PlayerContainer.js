@@ -5,8 +5,8 @@ import PlayerForm from './PlayerForm.js';
 
 function PlayerContainer() {
 
-    const [players, setPlayers] = useState(null)
-
+    const [players, setPlayers] = useState([])
+    const [currentSearch, setCurrentSearch] = useState("")
     //READ
 
     useEffect(() => {
@@ -15,9 +15,21 @@ function PlayerContainer() {
         .then(setPlayers)
     }, [])
 
+    const playerDisplayed = players
+    .filter((player)=> {
+        return (
+        player.name.toLowerCase().includes(currentSearch.toLowerCase()) ||
+        player.country.toLowerCase().includes(currentSearch.toLowerCase())
+        )
+    })
+
     function populatePlayers() {
-        return players.map((player) => (
+        return playerDisplayed.map((player) => (
         <Player player={player} key={player.id} updatePlayer={updatePlayer} deletePlayer={deletePlayer}/>));
+    }
+
+    function handleChange(e){
+        setCurrentSearch(e.target.value)
     }
     
     //CREATE
@@ -26,6 +38,7 @@ function PlayerContainer() {
         const updatedPlayer = ([...players, newPlayer])
         return setPlayers(updatedPlayer)
     }
+    
 
     //UPDATE
 
@@ -59,7 +72,9 @@ function PlayerContainer() {
 
     return(
         <div>
-            <div className="player-form"><PlayerForm handleAddPlayer={handleAddPlayer}/></div>
+            <div className="player-form"><PlayerForm handleAddPlayer={handleAddPlayer}/></div><br/>
+            <label>Find by Name or Country: </label>
+            <input onChange={handleChange} value={currentSearch}></input>
             <div className="player-container">{players && populatePlayers()}</div>
         </div>
     )
