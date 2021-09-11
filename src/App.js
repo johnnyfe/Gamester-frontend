@@ -3,6 +3,7 @@ import './App.css';
 import HomePage from './components/Homepage';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import PlayerContainer from './components/PlayerContainer';
+import GameContainer from './components/GameContainer';
 import NavBar from './components/Navbar';
 
 function App() {
@@ -16,6 +17,9 @@ function App() {
         </Route>
         <Route exact path="/players">
               <PlayerContainer />
+        </Route>
+        <Route exact path="/games">
+              <GameContainer />
         </Route>
       </Switch>
     </Router>
