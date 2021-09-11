@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 
-function Player({player, updatePlayer}) {
+function Player({player, updatePlayer, deletePlayer}) {
 
     const [newPlayer, setNewPlayer] = useState({...player});
     const [editMode, setEditMode] = useState(false);
@@ -39,7 +39,8 @@ function Player({player, updatePlayer}) {
                     <input name="country" value={newPlayer.country} onChange={handleChange}></input><br/>
                     <input name="years_of_experience" value={newPlayer.years_of_experience} onChange={handleChange}></input><br/>
                     <input name="img_url" value={newPlayer.photo_url} onChange={handleChange}></input><br/>
-                    <button type="submit">Update Player</button>
+                    <button type="submit">Update Player</button><br/>
+                    <button onClick={() => deletePlayer(player)}>Delete Player</button>
                 </form>
                </>
            )}

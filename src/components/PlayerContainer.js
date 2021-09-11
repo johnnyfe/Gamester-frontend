@@ -17,7 +17,7 @@ function PlayerContainer() {
 
     function populatePlayers() {
         return players.map((player) => (
-        <Player player={player} key={player.id} updatePlayer={updatePlayer}/>));
+        <Player player={player} key={player.id} updatePlayer={updatePlayer} deletePlayer={deletePlayer}/>));
     }
     
     //CREATE
@@ -44,6 +44,16 @@ function PlayerContainer() {
             }
             return p
         })
+        setPlayers(newPlayer)
+    }
+
+    //DELETE
+
+    function deletePlayer(player){
+        fetch(BASE_URL + 'players' + player.id, {
+            method: "DELETE"
+        })
+        const newPlayer = players.filter(p => p.id!== player.id)
         setPlayers(newPlayer)
     }
 
