@@ -5,12 +5,19 @@
     text-align: center;
 }
 
+.player-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 p {
     font-family: 'Press Start 2P', cursive;
 }
 
 label {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'VT323', monospace;
+    font-size: 30px;
 }
 
 h2 {

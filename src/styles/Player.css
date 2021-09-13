@@ -1,0 +1,27 @@
+.player-card {
+    justify-content: center;
+    margin: 2rem;
+    padding: 2rem;
+    border: 1px solid black;
+    width: 50em;
+    min-height: 10vw;
+    color: white;
+    background: rgb(2,0,36);
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.player-card img {
+    width: 35vw;
+}
+
+.player-card input {
+    border-radius: 15px 50px 20px;
+    background: black;
+    color:white;
+    padding: 10px; 
+    margin: 10px;
+    width: auto;
+    height: 10px;
+    font-family: "MV Boli";
+    font-size: 1em;
+}

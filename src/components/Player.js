@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
+import '../styles/Player.css'
 
 function Player({player, updatePlayer, deletePlayer}) {
 
@@ -23,7 +24,7 @@ function Player({player, updatePlayer, deletePlayer}) {
     }
 
     return (
-        <div>
+        <div className="player-card">
             <Link to={`/players/${player.id}`}>
                 <p>{player.name}</p>
            </Link>
