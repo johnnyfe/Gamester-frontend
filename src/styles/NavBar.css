@@ -1,0 +1,24 @@
+
+
+.navbar{
+    width: 100vw;
+    height: 80px;
+    background: rgb(34,48,195);
+    background: linear-gradient(0deg, rgba(34,48,195,1) 15%, rgba(0,0,1,1) 99%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid blue;
+    box-shadow: 1px 1px 5px blue;
+    font-family: 'games', sans-serif;
+    font-size: 2em;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: gray;
+}
+
+.navbar a:visited {
+    color: white;
+}
