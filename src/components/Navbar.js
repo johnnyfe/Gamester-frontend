@@ -9,6 +9,7 @@ function NavBar() {
             <Link to="/players">All Players</Link>
             <Link to="/games">All Games</Link>
             <Link to="/gameplays">All Gameplays</Link>
+            <Link to="/consoles">All Consoles</Link>
         </div>
     );
 }
