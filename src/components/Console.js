@@ -24,7 +24,7 @@ function Console({console, updateConsole, deleteConsole}) {
 
     return (
         <div>
-            <Link to={`/Console/${console.id}`}>
+            <Link to={`/consoles/${console.id}`}>
                 <p>{console.name}</p>
            </Link>
            <p>Cost: {console.cost}</p>

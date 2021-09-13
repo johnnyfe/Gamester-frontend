@@ -6,6 +6,7 @@ import PlayerContainer from './components/PlayerContainer';
 import GameContainer from './components/GameContainer';
 import NavBar from './components/Navbar';
 import ConsoleContainer from './components/ConsoleContainer';
+import ConsoleDetails from './components/ConsoleDetails';
 
 function App() {
   return (
@@ -25,9 +26,11 @@ function App() {
         <Route exact path="/consoles">
               <ConsoleContainer />
         </Route>
+        <Route path="/consoles/:id">
+              <ConsoleDetails />
+        </Route>
       </Switch>
     </Router>
   );
 }
-
 export default App;
