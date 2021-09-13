@@ -1,10 +1,9 @@
-import { useState } from "react"
+import React, {useEffect, useState} from 'react';
 import { useParams } from "react-router";
-import { useEffect } from "react/cjs/react.development";
 import { BASE_URL } from "../constrains";
-import Game from "./Game";
 import { useHistory } from "react-router";
-
+import GameForm from './GameForm';
+import GameDetails from './GameDetails';
 
 function ConsoleDetails(){
 
@@ -24,7 +23,6 @@ function ConsoleDetails(){
         })
         .then((json) => {setConsole(json) })
         .catch(error => {
-            console.log(error)
             history.push('/')
         })
     }, [id, history]);
@@ -48,12 +46,29 @@ function ConsoleDetails(){
     }
 
     function filteredGames(){
-        if(selectedCategory == "ALL"){
+        if(selectedCategory === "ALL"){
             return console.games;
         }
         return console.games.filter(
             (game) => game.category === selectedCategory
         );
+    }
+
+    function createGame(gamesDetails){
+        const newGame ={
+            ...gamesDetails,
+            console_id: id,
+        }
+
+        fetch(BASE_URL + '/games', {
+            method: "POST",
+            body: JSON.stringify(newGame)
+        })
+        .then((r) => r.json())
+        .then((json) => {
+            const newConsole = {...console, games: [...console.games, json] };
+            setConsole(newConsole)
+        })
     }
 
     return (
@@ -70,15 +85,16 @@ function ConsoleDetails(){
                 <h2>List of VideoGames</h2>
                 <div className="game-selected">
                     <select value={selectedCategory} onChange={handleSelectCategory}>
-                        <option value="ALL">All positions</option>
+                        <option value="ALL">Categories</option>
                         {populateCategoriesOptions()}
                     </select>
                     <div className = "game-card-container">
                         {filteredGames().map((game)=>(
-                            <Game key={game.id} game={game} />
+                            <GameDetails key={game.id} game={game} />
                         ))}
                     </div>
                 </div>
+                <GameForm createGame={createGame} />
                 </>
             )}
         </div>

@@ -25,7 +25,7 @@ function GameContainer(){
 
     function populateGames() {
         return gameDisplayed.map((game) => (
-        <Game game={game} key={game.id} updategame={updateGame} deleteGame={deleteGame}/>));
+        <Game game={game} key={game.id} updateGame={updateGame} deleteGame={deleteGame}/>));
     }
 
     function handleChange(e){

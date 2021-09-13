@@ -43,7 +43,7 @@ function Game({game, updateGame, deleteGame}) {
                     <input name="storage space" value={newGame.storage_space} onChange={handleChange}></input><br/>
                     <input name="img_url" value={newGame.img_url} onChange={handleChange}></input><br/>
                     <button type="submit">Update Game</button><br/>
-                    <button onClick={() => deleteGame(Game)}>Delete Game</button>
+                    <button onClick={() => deleteGame(game)}>Delete Game</button>
                 </form>
                </>
            )}
