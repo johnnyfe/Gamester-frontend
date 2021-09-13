@@ -17,8 +17,7 @@ function ConsoleContainer(){
     const consoleDisplayed = consoles
     .filter((console)=> {
         return (
-        console.name.toLowerCase().includes(currentSearch.toLowerCase()) ||
-        console.country.toLowerCase().includes(currentSearch.toLowerCase())
+        console.name.toLowerCase().includes(currentSearch.toLowerCase()) 
         )
     })
 
