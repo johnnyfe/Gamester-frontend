@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { BASE_URL } from '../constrains/index.js';
 import Game from "./Game.js";
+import "../styles/GameContainer.css"
 
 
 function GameContainer(){
@@ -64,7 +65,7 @@ function GameContainer(){
     }
 
     return(
-        <div>
+        <div className="all-games-container">
             <label>Find by Name or Category: </label>
             <input onChange={handleChange} value={currentSearch}></input>
             <div className="game-container">{games && populateGames()}</div>

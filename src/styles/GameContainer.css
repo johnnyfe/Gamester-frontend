@@ -1,0 +1,12 @@
+.all-games-container {
+    padding-top: 0.1em;
+    background: black;
+    color:white;
+    text-align: center;
+}
+
+.game-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
