@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
+import '../styles/Game.css'
 
 function Game({game, updateGame, deleteGame}) {
 
@@ -23,8 +24,8 @@ function Game({game, updateGame, deleteGame}) {
     }
 
     return (
-        <div>
-            <Link to={`/Games/${game.id}`}>
+        <div className='game-card'>
+            <Link to={`/games/${game.id}`}>
                 <p>{game.name}</p>
            </Link>
            <p>Category: {game.category}</p>
@@ -32,7 +33,7 @@ function Game({game, updateGame, deleteGame}) {
            <p>Rate {game.rate}</p>
            <p>Average Length: {game.average_length}</p>
            <p>Storage Space: {game.storage_space}</p>
-           <img src={game.img_url} alt="img_game"></img>
+           <img src={game.img_url} alt="img_game"></img><br/>
            {editMode && (
                <>
                 <form onSubmit={handleUpdate}>
@@ -47,7 +48,7 @@ function Game({game, updateGame, deleteGame}) {
                 </form>
                </>
            )}
-           <button onClick={toggleEdit}>Edit</button>
+           <button onClick={toggleEdit}>Modify Game</button>
         </div>
     )
 }

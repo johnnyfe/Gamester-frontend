@@ -1,4 +1,4 @@
-.player-card {
+.game-card {
     justify-content: center;
     margin: 2rem;
     padding: 2rem;
@@ -10,11 +10,11 @@
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
-.player-card img {
+.game-card img {
     width: 35vw;
 }
 
-.player-card input {
+.game-card input {
     border-radius: 15px 50px 20px;
     background: black;
     color:white;
@@ -26,7 +26,7 @@
     font-size: 1em;
 }
 
-.player-card button {
+.game-card button {
     color: white;
 	margin: 0.5em 0;
 	padding: .8em 2.2em;
