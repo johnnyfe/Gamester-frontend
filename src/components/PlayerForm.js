@@ -38,7 +38,7 @@ function PlayerForm({handleAddPlayer}) {
     }
 
     return (
-        <div className="soccer-team-form">
+        <div className="player-form">
             <h2>Create A New Player</h2>
             <form onSubmit={handleSubmit}>
                 <label>Name: </label>

@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { BASE_URL } from '../constrains/index.js';
 import Player from "./Player.js";
 import PlayerForm from './PlayerForm.js';
+import  '../styles/PlayerContainer.css';
 
 function PlayerContainer() {
 
@@ -71,8 +72,8 @@ function PlayerContainer() {
     }
 
     return(
-        <div>
-            <div className="player-form"><PlayerForm handleAddPlayer={handleAddPlayer}/></div><br/>
+        <div className="all-players-container">
+            <div className="player-form-container"><PlayerForm handleAddPlayer={handleAddPlayer}/></div><br/>
             <label>Find by Name or Country: </label>
             <input onChange={handleChange} value={currentSearch}></input>
             <div className="player-container">{players && populatePlayers()}</div>
