@@ -63,7 +63,7 @@ function PlayerContainer() {
     //DELETE
 
     function deletePlayer(player){
-        fetch(BASE_URL + 'players' + player.id, {
+        fetch(BASE_URL + 'players/' + player.id, {
             method: "DELETE"
         })
         const newPlayer = players.filter(p => p.id!== player.id)

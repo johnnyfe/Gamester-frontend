@@ -56,7 +56,7 @@ function GameContainer(){
     //DELETE
 
     function deleteGame(game){
-        fetch(BASE_URL + 'games' + game.id, {
+        fetch(BASE_URL + 'games/' + game.id, {
             method: "DELETE"
         })
         const newGame = games.filter(p => p.id!== game.id)
