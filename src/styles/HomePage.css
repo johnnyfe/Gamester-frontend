@@ -1,0 +1,29 @@
+.home-page-container {
+    font-size: 1.8em;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-bottom: 4.44em ;
+}
+
+.home-page-container h1 {
+    color: #1639d3; 
+    font-family: "Great Vibes", cursive; font-size: 165px; 
+    line-height: 160px; 
+    font-weight: normal; 
+    margin-bottom: 0px; 
+    margin-top: 40px; 
+    text-align: center; 
+    text-shadow: 0 5px 8px #fff;
+}
+
+.home-page-content p{
+	font-family: fantasy;
+    position: relative;
+    font-size: xx-large;
+}
+
+.home-page-content img{
+    justify-content: center;
+    width: 30em;
+}
