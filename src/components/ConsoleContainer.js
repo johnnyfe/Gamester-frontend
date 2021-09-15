@@ -62,7 +62,7 @@ function ConsoleContainer(){
 
     return(
         <div>
-            <label>Find by Name or Country: </label>
+            <label>Find by Name: </label>
             <input onChange={handleChange} value={currentSearch}></input>
             <div className="console-container">{consoles && populateConsoles()}</div>
         </div>

@@ -7,6 +7,7 @@ import GameContainer from './components/GameContainer';
 import NavBar from './components/Navbar';
 import ConsoleContainer from './components/ConsoleContainer';
 import ConsoleDetails from './components/ConsoleDetails';
+import GameplayContainer from './components/GameplayContainer';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route exact path="/games">
               <GameContainer />
+        </Route>
+        <Route exact path="/gameplays">
+              <GameplayContainer />
         </Route>
         <Route exact path="/consoles">
               <ConsoleContainer />

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { useParams } from "react-router";
-import { BASE_URL } from "../constrains";
+import { BASE_URL, CGL } from "../constrains";
 import { useHistory } from "react-router";
 import GameForm from './GameForm';
 import GameDetails from './GameDetails';
@@ -55,12 +55,14 @@ function ConsoleDetails(){
     }
 
     function createGame(gamesDetails){
+        CGL.log(gamesDetails)
         const newGame ={
             ...gamesDetails,
             console_id: id,
         }
+        CGL.log(newGame)
 
-        fetch(BASE_URL + '/games', {
+        fetch(BASE_URL + 'games', {
             method: "POST",
             body: JSON.stringify(newGame)
         })
