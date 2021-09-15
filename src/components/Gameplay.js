@@ -32,7 +32,8 @@ function Gameplay({gameplay, updateGameplay, deleteGameplay}) {
            </Link>
            <p>Likes: {gameplay.likes}</p>
            <p>Game Time: {gameplay.game_time}</p>
-           <iframe src={gameplay.video_url} title={gameplay.title}></iframe>
+           <iframe src={gameplay.video_url} width="600px" height="400px" title={gameplay.title}></iframe>
+           <p>{gameplay.game.name}</p>
            {editMode && (
                <>
                 <form onSubmit={handleUpdate}>

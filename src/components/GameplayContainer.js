@@ -15,10 +15,8 @@ function GameplayContainer(){
 
     //CREATE
 
-    CGL.log(setGameplays)
 
     function populateGameplays(){
-        CGL.log(gameplays)
         return gameplays.map((gameplay) => (
             <Gameplay gameplay={gameplay} key={gameplay.id} deleteGameplay={deleteGameplay} updateGameplay={updateGameplay}/>
         ))
