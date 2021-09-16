@@ -66,8 +66,10 @@ function GameContainer(){
 
     return(
         <div className="all-games-container">
-            <label>Find by Name or Category: </label>
-            <input onChange={handleChange} value={currentSearch}></input>
+            <div className="game-search">
+                <label>Find by Name or Category: </label>
+                <input onChange={handleChange} value={currentSearch}></input>
+            </div>
             <div className="game-container">{games && populateGames()}</div>
         </div>
     )
