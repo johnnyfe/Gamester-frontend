@@ -33,14 +33,25 @@ function Gameplay({gameplay, updateGameplay, deleteGameplay}) {
            <p>Likes: {gameplay.likes}</p>
            <p>Game Time: {gameplay.game_time}</p>
            <iframe src={gameplay.video_url} width="600px" height="400px" title={gameplay.title}></iframe>
-           <p>{gameplay.game.name}</p>
+           <div className='gameplay-game-card'>
+               <p>Name: <label>{gameplay.game.name}</label></p>
+               <p>Category: <label>{gameplay.game.category}</label></p>
+               <img height="200px" src={gameplay.game.img_url}></img>
+           </div>
+
+           <div className='gameplay-player-card'>
+               <p>Name: <label>{gameplay.player.name}</label></p>
+               <p>Category: <label>{gameplay.player.country}</label></p>
+               <img height="200px" src={gameplay.player.photo_url}></img>
+           </div>
+           
            {editMode && (
                <>
                 <form onSubmit={handleUpdate}>
                     <input name="title" value={newGameplay.title} onChange={handleChange}></input><br/>
                     <input name="likes" value={newGameplay.likes} onChange={handleChange}></input><br/>
                     <input name="game_time" value={newGameplay.game_time} onChange={handleChange}></input><br/>
-                    <input name="vide_url" value={newGameplay.video} onChange={handleChange}></input><br/>
+                    <input name="video_url" value={newGameplay.video_url} onChange={handleChange}></input><br/>
                     <button type="submit">Update Gameplay</button><br/>
                     <button onClick={() => deleteGameplay(gameplay)}>Delete Gameplay</button>
                 </form>

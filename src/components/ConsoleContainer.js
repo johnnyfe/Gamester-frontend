@@ -69,9 +69,9 @@ function ConsoleContainer(){
 
     return(
         <div>
+            <div className="console-form-container"><ConsoleForm handleAddConsole={handleAddConsole}/></div><br/>
             <label>Find by Name: </label>
             <input onChange={handleChange} value={currentSearch}></input>
-            <div className="console-form-container"><ConsoleForm handleAddConsole={handleAddConsole}/></div><br/>
             <div className="console-container">{consoles && populateConsoles()}</div>
         </div>
     )

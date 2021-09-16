@@ -79,6 +79,7 @@ function ConsoleDetails(){
 
     return (
         <div>
+            <div className="game-form-container"><GameForm createGame={createGame} /> </div>
             {console && (
                 <>
                 <div className="console-selected">
@@ -100,7 +101,7 @@ function ConsoleDetails(){
                         ))}
                     </div>
                 </div>
-                <GameForm createGame={createGame} />
+                
                 </>
             )}
         </div>

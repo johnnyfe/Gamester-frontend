@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { BASE_URL, CGL } from "../constrains";
 import Gameplay from "./Gameplay";
+import GameplayForm from "./GameplayForm";
 
 
 function GameplayContainer(){
@@ -62,7 +63,7 @@ function GameplayContainer(){
 
     return (
         <div>
-            {/* <div className="gameplay-form"><GameplayForm  handleAddGameplay={handleAddGameplay}/></div> */}
+            <div className="gameplay-form"><GameplayForm  handleAddGameplay={handleAddGameplay}/></div>
             <div className="gampley-container">{gameplays && populateGameplays()}</div>
         </div>
     )

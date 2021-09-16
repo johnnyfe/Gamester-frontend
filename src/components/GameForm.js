@@ -33,6 +33,7 @@ function GameForm({createGame}) {
 
     return (
         <form className="game-form">
+            <h2>Add a New Game</h2>
             <label>Name: </label>
             <input onChange={handleChange} name="name" value={formData.name} /> <br/>
             <label>Category: </label>
