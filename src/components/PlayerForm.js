@@ -30,7 +30,7 @@ function PlayerForm({handleAddPlayer}) {
             method: "POST",
             body: JSON.stringify(newplayer),
             headers: {
-              Accept: "application/json",
+              "Accept": "application/json",
               "Content-Type": "application/json",
             },
           })

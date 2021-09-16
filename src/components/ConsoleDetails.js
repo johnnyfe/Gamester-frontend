@@ -64,6 +64,10 @@ function ConsoleDetails(){
 
         fetch(BASE_URL + 'games', {
             method: "POST",
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+              },
             body: JSON.stringify(newGame)
         })
         .then((r) => r.json())

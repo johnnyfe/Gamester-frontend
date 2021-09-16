@@ -41,7 +41,7 @@ function GameContainer(){
             method: "PATCH",
             body: JSON.stringify(game),
             headers: {
-                Accept: "application/json",
+                "Accept": "application/json",
                 "Content-Type": "application/json",
               },
         });
