@@ -28,7 +28,7 @@ function Console({console, updateConsole, deleteConsole}) {
                 <p>{console.name}</p>
            </Link>
            <p>Cost: {console.cost}</p>
-           <p>Storage Capacity: {console.storage_space}</p>
+           <p>Storage Capacity: {console.storage_capacity} Gbs</p>
            <img src={console.img_url} alt="img_game"></img>
            {editMode && (
                <>

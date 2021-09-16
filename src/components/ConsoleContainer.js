@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { BASE_URL } from "../constrains/index";
 import Console from "./Console";
+import ConsoleForm from './ConsoleForm';
 
 function ConsoleContainer(){
 
@@ -29,6 +30,12 @@ function ConsoleContainer(){
     function handleChange(e){
         setCurrentSearch(e.target.value)
     }
+
+    //CREATE
+    function handleAddConsole(newConsole){
+        const updateConsole=([...consoles, newConsole])
+        return setConsoles(updateConsole)
+    }
     
     //UPDATE
 
@@ -53,7 +60,7 @@ function ConsoleContainer(){
     //DELETE
 
     function deleteConsole(console){
-        fetch(BASE_URL + 'consoles' + console.id, {
+        fetch(BASE_URL + 'consoles/' + console.id, {
             method: "DELETE"
         })
         const newConsole = consoles.filter(c => c.id!== console.id)
@@ -64,6 +71,7 @@ function ConsoleContainer(){
         <div>
             <label>Find by Name: </label>
             <input onChange={handleChange} value={currentSearch}></input>
+            <div className="console-form-container"><ConsoleForm handleAddConsole={handleAddConsole}/></div><br/>
             <div className="console-container">{consoles && populateConsoles()}</div>
         </div>
     )
