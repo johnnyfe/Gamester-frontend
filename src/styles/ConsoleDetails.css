@@ -1,0 +1,22 @@
+.console-details-container {
+    padding-top: 0.1em;
+    background: black;
+    color:white;
+    text-align: center;
+}
+
+.console-selected img{
+    width: 400px;
+}
+
+.game-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game-card-container img{
+    width: 600px;
+    padding: 30px;
+    margin: 100px;
+}

@@ -4,6 +4,7 @@ import { BASE_URL, CGL } from "../constrains";
 import { useHistory } from "react-router";
 import GameForm from './GameForm';
 import GameDetails from './GameDetails';
+import '../styles/ConsoleDetails.css'
 
 function ConsoleDetails(){
 
@@ -55,12 +56,10 @@ function ConsoleDetails(){
     }
 
     function createGame(gamesDetails){
-        CGL.log(gamesDetails)
         const newGame ={
             ...gamesDetails,
             console_id: id,
         }
-        CGL.log(newGame)
 
         fetch(BASE_URL + 'games', {
             method: "POST",
@@ -78,7 +77,7 @@ function ConsoleDetails(){
     }
 
     return (
-        <div>
+        <div className="console-details-container">
             <div className="game-form-container"><GameForm createGame={createGame} /> </div>
             {console && (
                 <>
