@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { BASE_URL } from "../constrains/index";
 import Console from "./Console";
 import ConsoleForm from './ConsoleForm';
+import '../styles/ConsoleContainer.css'
 
 function ConsoleContainer(){
 
@@ -68,7 +69,7 @@ function ConsoleContainer(){
     }
 
     return(
-        <div>
+        <div className="all-consoles-container">
             <div className="console-form-container"><ConsoleForm handleAddConsole={handleAddConsole}/></div><br/>
             <label>Find by Name: </label>
             <input onChange={handleChange} value={currentSearch}></input>
