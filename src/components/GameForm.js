@@ -1,4 +1,5 @@
 import React, { useState} from 'react';
+import '../styles/GameForm.css'
 
 function GameForm({createGame}) {
 
@@ -33,22 +34,22 @@ function GameForm({createGame}) {
 
     return (
         <form className="game-form">
-            <h2>Add a New Game</h2>
+            <h2>Add a New Game to This Video Game Console</h2>
             <label>Name: </label>
-            <input onChange={handleChange} name="name" value={formData.name} /> <br/>
+            <input onChange={handleChange} placeholder="Fornite" name="name" value={formData.name} /> <br/>
             <label>Category: </label>
-            <input onChange={handleChange} name="category" value={formData.category} /> <br/>
+            <input onChange={handleChange} placeholder="Adventure" name="category" value={formData.category} /> <br/>
             <label>Cost: </label>
-            <input onChange={handleChange} name="cost" value={formData.cost} /> <br/>
+            <input onChange={handleChange} placeholder="10..100" name="cost" value={formData.cost} /> <br/>
             <label>Rate: </label>
-            <input onChange={handleChange} name="rate" value={formData.rate} /> <br/>
+            <input onChange={handleChange} placeholder="1..10" name="rate" value={formData.rate} /> <br/>
             <label>Average length: </label>
-            <input onChange={handleChange} name="average_length" value={formData.average_length} /> <br/>
+            <input onChange={handleChange} placeholder="10..100" name="average_length" value={formData.average_length} /> <br/>
             <label>Storage Space: </label>
-            <input onChange={handleChange} name="storage_space" value={formData.storage_space} /> <br/>
+            <input onChange={handleChange} placeholder="0..250" name="storage_space" value={formData.storage_space} /> <br/>
             <label>Image Url: </label>
-            <input onChange={handleChange} name="img_url" value={formData.img_url} /> <br/>
-            <button onClick={handleSubmit}>Add a New Game to This Console</button>
+            <input onChange={handleChange} placeholder="https://gamename.jpg" name="img_url" value={formData.img_url} /> <br/>
+            <button onClick={handleSubmit}>Add New Game</button>
         </form>
     );
 }

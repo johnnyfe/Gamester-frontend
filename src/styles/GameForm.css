@@ -1,0 +1,39 @@
+.game-form-container input{
+    border-radius: 15px 50px 20px;
+    background: rgb(36, 13, 184);
+    color:white;
+    padding: 10px; 
+    margin: 10px;
+    width: auto;
+    height: 10px;
+    font-family: "MV Boli";
+    font-size: 1em;
+}
+
+.game-form-container ::placeholder {
+    color: lightgray;
+}
+
+.game-form-container button {
+    display:inline-block;
+    padding:0.1em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    height: 30px;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 2em;
+    box-sizing: content-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    background: linear-gradient(to bottom, #043d6e 5%, #0688fa 100%);;
+    background-color:#043d6e;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+.game-form-container button:hover {
+    background:linear-gradient(to bottom, #0688fa 5%, #043d6e 100%);
+    background-color: rgba(44, 44, 226, 0.514);
+}
