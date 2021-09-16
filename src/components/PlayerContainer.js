@@ -74,8 +74,10 @@ function PlayerContainer() {
     return(
         <div className="all-players-container">
             <div className="player-form-container"><PlayerForm handleAddPlayer={handleAddPlayer}/></div><br/>
-            <label>Find by Name or Country: </label>
-            <input onChange={handleChange} value={currentSearch}></input>
+            <div className="player-search">
+               <label>Find by Name or Country: </label>
+               <input onChange={handleChange} value={currentSearch}></input> 
+            </div>
             <div className="player-container">{players && populatePlayers()}</div>
         </div>
     )
