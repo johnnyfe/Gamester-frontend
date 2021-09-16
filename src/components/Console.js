@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
+import '../styles/Console.css'
 
 function Console({console, updateConsole, deleteConsole}) {
 
@@ -23,7 +24,7 @@ function Console({console, updateConsole, deleteConsole}) {
     }
 
     return (
-        <div>
+        <div className="console-card">
             <Link to={`/consoles/${console.id}`}>
                 <p>{console.name}</p>
            </Link>
