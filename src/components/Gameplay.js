@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
-import '../styles/Game.css'
+import '../styles/Gameplay.css'
 
 
     
@@ -33,17 +33,20 @@ function Gameplay({gameplay, updateGameplay, deleteGameplay}) {
            <p>Likes: {gameplay.likes}</p>
            <p>Game Time: {gameplay.game_time}</p>
            <iframe src={gameplay.video_url} width="600px" height="400px" title={gameplay.title}></iframe>
-           <div className='gameplay-game-card'>
-               <p>Name: <label>{gameplay.game.name}</label></p>
-               <p>Category: <label>{gameplay.game.category}</label></p>
-               <img height="200px" src={gameplay.game.img_url}></img>
-           </div>
+           <div className="gameplay-game-player">
+              <div className='gameplay-game-card'>
+                    <p>Game Name: <label>{gameplay.game.name}</label></p>
+                    <p>Category: <label>{gameplay.game.category}</label></p>
+                    <img src={gameplay.game.img_url}></img>
+              </div>
 
-           <div className='gameplay-player-card'>
-               <p>Name: <label>{gameplay.player.name}</label></p>
-               <p>Category: <label>{gameplay.player.country}</label></p>
-               <img height="200px" src={gameplay.player.photo_url}></img>
+               <div className='gameplay-player-card'>
+                    <p>Player Name: <label>{gameplay.player.name}</label></p>
+                    <p>Country: <label>{gameplay.player.country}</label></p>
+                    <img src={gameplay.player.photo_url}></img>
+                </div> 
            </div>
+           
            
            {editMode && (
                <>
