@@ -8,6 +8,7 @@ function Gameplay({gameplay, updateGameplay, deleteGameplay}) {
 
     const [newGameplay, setNewGameplay] = useState({...gameplay});
     const [editMode, setEditMode] = useState(false);
+    const [like, setLike] = useState(0);
 
     function handleChange(e){
         const updateValue = {...newGameplay}
@@ -25,25 +26,30 @@ function Gameplay({gameplay, updateGameplay, deleteGameplay}) {
         setEditMode(false);
     }
 
+    function handleClickLike(){
+        setLike(like + 1)
+    }
+
     return (
         <div className='gameplay-card'>
             <Link to={`/gameplays/${gameplay.id}`}>
                 <p>{gameplay.title}</p>
            </Link>
-           <p>Likes: {gameplay.likes}</p>
+           <p>Likes: {gameplay.likes = like}</p>
+           <button onClick={handleClickLike}>Add Like</button>
            <p>Game Time: {gameplay.game_time}</p>
            <iframe src={gameplay.video_url} width="600px" height="400px" title={gameplay.title}></iframe>
            <div className="gameplay-game-player">
               <div className='gameplay-game-card'>
                     <p>Game Name: <label>{gameplay.game.name}</label></p>
                     <p>Category: <label>{gameplay.game.category}</label></p>
-                    <img src={gameplay.game.img_url}></img>
+                    <img src={gameplay.game.img_url} alt={gameplay.game.name}></img>
               </div>
 
                <div className='gameplay-player-card'>
                     <p>Player Name: <label>{gameplay.player.name}</label></p>
                     <p>Country: <label>{gameplay.player.country}</label></p>
-                    <img src={gameplay.player.photo_url}></img>
+                    <img src={gameplay.player.photo_url} alt={gameplay.player.name}></img>
                 </div> 
            </div>
            

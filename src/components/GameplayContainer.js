@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
-import { BASE_URL, CGL } from "../constrains";
+import { BASE_URL} from "../constrains";
 import Gameplay from "./Gameplay";
-import GameplayForm from "./GameplayForm";
+// import GameplayForm from "./GameplayForm";
 import '../styles/GameplayContainer.css'
 
 
@@ -26,10 +26,10 @@ function GameplayContainer(){
 
     //CREATE
 
-    function handleAddGameplay(newGameplay){
-        const updateGameplay=([...gameplays, newGameplay])
-        return setGameplays(updateGameplay)
-    }
+    // function handleAddGameplay(newGameplay){
+    //     const updateGameplay=([...gameplays, newGameplay])
+    //     return setGameplays(updateGameplay)
+    // }
 
     //UPDATE
 
@@ -65,8 +65,9 @@ function GameplayContainer(){
     return (
         <div className="all-gameplays-container">
             <h2>GAMEPLAYS</h2>
+            {/* <div className="gameplay-form"><GameplayForm  handleAddGameplay={handleAddGameplay}/></div> */}
             <div className="gameplay-container">{gameplays && populateGameplays()}</div>
-            <div className="gameplay-form"><GameplayForm  handleAddGameplay={handleAddGameplay}/></div>
+            
         </div>
     )
 }

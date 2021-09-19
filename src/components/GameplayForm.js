@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BASE_URL, CGL } from "../constrains/index"
+import '../styles/GameplayForm.css'
 
 
 function GameplayForm({handleAddGameplay}) {
