@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import {Link} from 'react-router-dom';
 import '../styles/Gameplay.css'
 
 
@@ -32,9 +31,7 @@ function Gameplay({gameplay, updateGameplay, deleteGameplay}) {
 
     return (
         <div className='gameplay-card'>
-            <Link to={`/gameplays/${gameplay.id}`}>
-                <p>{gameplay.title}</p>
-           </Link>
+           <p>{gameplay.title}</p>
            <p>Likes: {gameplay.likes = like}</p>
            <button onClick={handleClickLike}>Add Like</button>
            <p>Game Time: {gameplay.game_time}</p>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import {Link} from 'react-router-dom';
 import '../styles/Game.css'
 
 function Game({game, updateGame, deleteGame}) {
@@ -25,9 +24,7 @@ function Game({game, updateGame, deleteGame}) {
 
     return (
         <div className='game-card'>
-            <Link to={`/games/${game.id}`}>
-                <p>{game.name}</p>
-           </Link>
+           <p>{game.name}</p>
            <p>Category: {game.category}</p>
            <p>Cost: {game.cost}</p>
            <p>Rate {game.rate}</p>
